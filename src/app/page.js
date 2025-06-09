@@ -37,7 +37,7 @@ function App() {
     if (!busca.trim()) return;
     setCarregando(true);
     try {
-      const resposta = await fetch(`http://localhost:5006/buscar?q=${encodeURIComponent(busca)}`);
+      const resposta = await fetch(`/api/buscar?q=${encodeURIComponent(busca)}`);
       if (!resposta.ok) throw new Error('Resultado não encontrado');
       const dados = await resposta.json();
       setResultados(dados);
