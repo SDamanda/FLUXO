@@ -1,16 +1,13 @@
 {
-  "name": "fluxo",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd api && pip install -r requirements.txt && flask run --port 5004",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
+
