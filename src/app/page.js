@@ -1,95 +1,97 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import React, { useState } from "react";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          objectFit: 'cover',
+          zIndex: -1
+        }}
+      >
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+      <App />
+    </>
+  );
+}
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+function App() {
+  const [busca, setBusca] = useState('');
+  const [resultados, setResultados] = useState([]);
+  const [carregando, setCarregando] = useState(false);
+  const [quantidade, setQuantidade] = useState('');
+  const [buscou, setBuscou] = useState()
+
+  const handleBuscar = async () => {
+    if (!busca.trim()) return;
+    setCarregando(true);
+    try {
+      const resposta = await fetch(`http://localhost:5005/buscar?q=${encodeURIComponent(busca)}`);
+      if (!resposta.ok) throw new Error('Resultado não encontrado');
+      const dados = await resposta.json();
+      setResultados(dados);
+    } catch (error) {
+      console.error('Erro:', error);
+      setResultados([]);
+    } finally {
+      setCarregando(false);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') handleBuscar();
+  };
+
+  return (
+    <div id='introdução'>
+      <h1>FLUXO</h1>
+      <h3>ache seu numero verificador, com apenas um click</h3>
+      <div className='procura'>
+        <input
+          type="text"
+          value={busca}
+          onChange={(e) => setBusca(e.target.value)}
+          onKeyPress={handleKeyPress}
+          name='nome'
+          className='nomeem'
+          placeholder='Digite o nome da empresa'
+        />
+        <input
+          type="number"
+          name="quantidade"
+          className="abc"
+          value={quantidade}
+          onChange={e => setQuantidade(e.target.value)}
+        />
+        <button onClick={handleBuscar} disabled={carregando}>
+          {carregando ? 'Buscando...' : 'Enviar'}
+        </button>
+      </div>
+      <div className="procura">
+        {resultados.length > 0 ? (
+          <ul className='resultados'>
+            {resultados.map((item, index) => (
+              <li key={index} className='resultado-item'>
+                <h3>{item['Nome da empresa']}</h3>
+                <p>{item['CNPJ']}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          buscou && <p className='sem-resultados'>Nenhum resultado encontrado</p>
+        )}
+      </div>
     </div>
   );
 }
