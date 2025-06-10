@@ -34,8 +34,8 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/src/font/inter/Inter-Bold.ttf") format("truetype");
+  font-family: "Inter2";
+  src: url("/src/font/inter/static/Inter_28pt-SemiBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -46,7 +46,10 @@
   font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "roboto2";
+  src: url(/src/font/Roboto/static/Roboto-Italic.ttf) format("truetype");
+}
 
 body {
   background-repeat: no-repeat;
@@ -120,7 +123,7 @@ body {
 }
 
 #introdução h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 900;
   margin-bottom: 0.5em;
   background: linear-gradient(90deg, #D4AF37 20%, #fff 50%, #D4AF37 80%);
@@ -134,10 +137,10 @@ body {
 }
 
 #introdução h3 {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-family: "Roboto2", Arial, sans-serif;
+  font-size: 2rem;
   color: var(--cinza-claro);
-  margin-bottom: 0.5em;
+  margin-top: -20px;
 }
 
 #introdução p {
@@ -204,28 +207,22 @@ body {
 }
 
 .procura input {
-  font-size: 25px;
+  font-size: 50px;
   color: aliceblue;
-  font-family: 'robot2';
   margin: 10px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  margin: 10px;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 400px;
+  line-height: 1.5rem;
   transition: border-color 0.25s;
   outline: none;
-  transition: border-color 0.2s;
 }
-
+.procura input:hover{
+    border-color: #D4AF37;
+  }
   ul,
   ol {
     list-style-type: none;
   }
-
-  input:hover {
-    border-color: #D4AF37;
-  }
-
   .nomeem {
     width: 260px
   }
@@ -268,6 +265,7 @@ body {
     word-break: break-word;
     box-shadow: 0 2px 8px #0002;
     transition: background 0.2s;
+     font-family: 'inter', sans-serif, Arial, Helvetica, sans-serif;
   }
 
   .resultado-item h3 {

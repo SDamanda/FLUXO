@@ -1,4 +1,4 @@
-// File: /home/eliti/fluxo/src/app/api/buscar/route.js
+// File: C:\Users\Jhon Mamadeiros\Documents\GitHub\FLUXO\src\app\api\buscar\route.js
 import * as entry from '../../../../../src/app/api/buscar/route.js'
 import type { NextRequest } from 'next/server.js'
 

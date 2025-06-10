@@ -1,4 +1,4 @@
-// File: /home/eliti/fluxo/src/app/layout.js
+// File: C:\Users\Jhon Mamadeiros\Documents\GitHub\FLUXO\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
