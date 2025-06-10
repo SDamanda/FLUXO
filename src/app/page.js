@@ -56,7 +56,7 @@ function App() {
   return (
     <div id='introdução'>
       <h1>FLUXO</h1>
-      <h3>ache seu numero verificador, com apenas um click</h3>
+      <h3>ache a empresa com apenas um click</h3>
       <div className='procura'>
         <input
           type="text"
