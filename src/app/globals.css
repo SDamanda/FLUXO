@@ -95,11 +95,11 @@ body {
 }
 
 #introdução {
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: #000;      /* Preto sólido */
   padding: 32px 24px;
   width: 100%;
-  max-width: 480px;
-  min-width: 0;
+  max-width: 900px;
+  min-width: 320px;
   min-height: 0;
   border-radius: 36px;
   margin: 64px auto 32px auto;
@@ -245,10 +245,6 @@ body {
     margin: 32px auto 0 auto;
     list-style: none;
     padding: 0;
-  }
-  h1{
-
-  height: 1000px;
   }
 
   .resultado-item {
