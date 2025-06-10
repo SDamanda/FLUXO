@@ -84,7 +84,6 @@ function App() {
             {resultados.map((item, index) => (
               <li key={index} className='resultado-item'>
                 <h3>{item['Nome da empresa']}</h3>
-                <p>{item['CNPJ']}</p>
               </li>
             ))}
           </ul>

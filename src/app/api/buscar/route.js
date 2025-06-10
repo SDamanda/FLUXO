@@ -70,8 +70,7 @@ export async function GET(request) {
                 .filter(e => (e['Nome da empresa'] || '').toLowerCase().includes(termo))
                 .sort((a, b) => (a['Nome da empresa'] || '').length - (b['Nome da empresa'] || '').length)
                 .map(e => ({
-                    'Nome da empresa': e['Nome da empresa'],
-                    'CNPJ': e['CNPJ']
+                    'Nome da empresa': e['Nome da empresa']
                 }));
         }
 
