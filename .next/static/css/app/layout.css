@@ -215,7 +215,7 @@ body {
   transition: border-color 0.25s;
   outline: none;
   transition: border-color 0.2s;
-}
+} 
 
   ul,
   ol {
@@ -254,7 +254,10 @@ body {
     list-style: none;
     padding: 0;
   }
+  h1{
 
+  height: 1000px;
+  }
 
   .resultado-item {
     background: var(--fundo-secundario, #232834);

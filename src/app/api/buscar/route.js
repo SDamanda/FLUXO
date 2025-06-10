@@ -59,21 +59,25 @@ export async function GET(request) {
         const empresas = await lerEmpresasCSV();
 
         let resposta = [];
+        // ...existing code...
         if (/^\d+$/.test(termo)) {
             const n = parseInt(termo, 10);
             resposta = empresas.slice(0, n).map(e => ({
                 'Nome da empresa': e['Nome da empresa'],
-                'CNPJ': e['CNPJ']
+                'CNPJ': e['CNPJ Completo'],
+                'DV': e['DV Calculado']
             }));
         } else {
             resposta = empresas
                 .filter(e => (e['Nome da empresa'] || '').toLowerCase().includes(termo))
                 .sort((a, b) => (a['Nome da empresa'] || '').length - (b['Nome da empresa'] || '').length)
                 .map(e => ({
-                    'Nome da empresa': e['Nome da empresa']
+                    'Nome da empresa': e['Nome da empresa'],
+                    'CNPJ': e['CNPJ Completo'],
+                    'DV': e['DV Calculado']
                 }));
         }
-
+        // ...existing code...
         return Response.json(resposta);
     } catch (err) {
         return Response.json({ error: 'Erro ao processar o CSV' }, { status: 500 });

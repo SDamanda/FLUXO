@@ -83,7 +83,10 @@ function App() {
           <ul className='resultados'>
             {resultados.map((item, index) => (
               <li key={index} className='resultado-item'>
-                <h3>{item['Nome da empresa']}</h3>
+                <h3>
+                  {item['Nome da empresa']}<br />
+                  {item['CNPJ'].slice(0, -2)}-{item['CNPJ'].slice(-2)}
+                </h3>
               </li>
             ))}
           </ul>
