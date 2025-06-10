@@ -251,7 +251,10 @@ body {
     list-style: none;
     padding: 0;
   }
+  h1{
 
+  height: 1000px;
+  }
 
   .resultado-item {
     background: var(--fundo-secundario, #232834);
