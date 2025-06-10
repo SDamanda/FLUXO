@@ -169,7 +169,7 @@ body {
 .procura {
   font-size: 20px;
   align-items: center;
-  font-family: 'Cinzel', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif;
+  font-family:'inter', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif
 }
 
 .procura input {
@@ -177,7 +177,7 @@ body {
   color: aliceblue;
   font-family: 'robot2';
   margin: 10px;
-  font-family: 'inter', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif;
+  font-family:'inter', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif
   font-weight: 400;
   line-height: 1.5;
   transition: border-color 0.25s;
@@ -196,7 +196,7 @@ input:hover {
 
 @font-face {
   font-family: "inter";
-  src: url(/src/font/inter/Inter-Italic-VariableFont_opsz\,wght.ttf) format(truetype);
+  src: url(./font/Inter/static/Inter_18pt-Italic.ttf) format(truetype);
 }
 
 .nomeem {
