@@ -70,11 +70,12 @@ body {
 }
 
 #introdução {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.88);
   padding: 48px 32px;
   width: 100%;
-  max-width: 500px;
-  border-radius: 32px;
+  max-width: 600px;
+  min-width: 320px;
+  border-radius: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,19 +86,62 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  box-sizing: border-box;
 }
+
 #introdução h1 {
-  color: var(--branco);
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 900;
   margin-bottom: 0.5em;
-}s
-
-
+  background: linear-gradient(90deg, #D4AF37 30%, #fff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+#introdução p {
+  color: var(--cinza-medio);
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-style: italic;
+}
+#introdução form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+#introdução input {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  background: var(--fundo-secundario);
+  color: var(--branco);
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
 #introdução input::placeholder {
   color: var(--cinza-claro);
   opacity: 1;
 }
 
+#introdução button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--azul-medio);
+  color: var(--branco);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#introdução button:hover {
+  background: var(--azul-escuro);
+}
 
 .bg-video {
   position: fixed;
