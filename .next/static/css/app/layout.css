@@ -74,9 +74,9 @@ body {
 
 #introdução {
   background-color: rgba(0, 0, 0, 0.88);
-  padding: 48px 32px;
+  padding: 48px 48px;
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;      
   min-width: 320px;
   border-radius: 48px;
   position: absolute;
@@ -105,9 +105,14 @@ body {
   letter-spacing: 2px;
   animation: shine 1s linear infinite;
 }
+#introdução h3 {
+  font-size: 1.5rem;
+  color: var(--cinza-claro);
+  margin-bottom: 0.5em;
+}
 
 #introdução p {
-  color: var(--cinza-medio);
+  color: var(--branco);
   font-size: 1.2rem;
   margin-bottom: 1.5em;
   text-align: center;
@@ -139,7 +144,7 @@ body {
   padding: 10px 24px;
   border-radius: 8px;
   border: none;
-  background: var(--azul-medio);
+  background: var(--cinza-card);
   color: var(--branco);
   font-size: 1.1rem;
   cursor: pointer;
@@ -214,7 +219,7 @@ input:hover {
 
 .resultados {
   width: 100%;
-  max-width: 350px;
+  max-width: 700px;      
   margin: 32px auto 0 auto;
   list-style: none;
   padding: 0;
@@ -222,17 +227,18 @@ input:hover {
 
 
 .resultado-item {
-  background: var(--fundo-secundario);
-  padding: 14px 18px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--branco);
-  color: var(--branco);
-  font-size: 1rem;
+  background: var(--fundo-secundario, #232834);
+  padding: 18px 24px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--branco, #fff);
+  color: var(--branco, #fff);
+  font-size: 1.15rem;
   text-align: left;
   word-break: break-word;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s;
 }
-
 
 .resultado-item h3 {
   color: var(--branco);
@@ -249,15 +255,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
-@media (max-width: 700px) {
-  #introdução {
+@media (max-width: 1000px) {
+  #introdução, .resultados {
     max-width: 95vw;
-    min-width: unset;
     padding: 24px 8px;
-    border-radius: 24px;
-  }
-  .resultados {
-    max-width: 95vw;
   }
 }
 
