@@ -96,24 +96,19 @@ body {
 
 #introdução {
   background-color: rgba(0, 0, 0, 0.88);
-  padding: 64px 48px;
+  padding: 32px 24px;
   width: 100%;
-  max-width: 900px;
-  min-width: 320px;
-  min-height: 450px;
-  border-radius: 48px;
-  margin: 48px auto;
-  box-shadow: 0 8px 32px #000a;
+  max-width: 480px;
+  min-width: 0;
+  min-height: 0;
+  border-radius: 36px;
+  margin: 64px auto 32px auto;
+  box-shadow: 0 4px 24px #000a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   box-sizing: border-box;
-  position: static;
-  top: unset;
-  left: unset;
-  transform: none;
-  z-index: 1;
 }
 
 #introdução h1 {
