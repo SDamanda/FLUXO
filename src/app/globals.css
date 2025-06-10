@@ -165,9 +165,10 @@ input:hover {
 
 .resultados {
   width: 100%;
-  max-width: 700px;
-  margin-top: 100px;
+  max-width: 400px;
+  margin: 40px auto 0 auto;
   list-style: none;
+  padding: 0;
 }
 
 .resultado-item {
