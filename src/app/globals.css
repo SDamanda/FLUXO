@@ -11,7 +11,7 @@
   --coral: #ff8a65;
   --branco: #fff;
   --preto: #181c22;
-  --borda: #dde932;
+  --borda: #e9dd32;
   --sombra: 0 4px 24px #0006;
   --sombra-leve: 0 2px 8px #0003;
 }
@@ -121,14 +121,13 @@ body {
 
 #introdução h1 {
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 900rem;
   margin-bottom: 0.5em;
   background: linear-gradient(90deg, #D4AF37 20%, #fff 50%, #D4AF37 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   letter-spacing: 2px;
   animation: shine 1s linear infinite;
 }
@@ -255,7 +254,7 @@ body {
     padding: 18px 24px;
     margin-bottom: 12px;
     border-radius: 12px;
-    border: 1px solid var(--branco, #fff);
+    border: 1px solid var(--borda, #e9dd32);
     color: var(--branco, #fff);
     font-size: 1.15rem;
     text-align: left;
@@ -266,8 +265,9 @@ body {
   }
 
   .resultado-item h3 {
-    color: var(--branco);
+    color: #D4AF37;
     margin-bottom: 8px;
+    font-size: 100px; 
   }
 
   .sem-resultados {
