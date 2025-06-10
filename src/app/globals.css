@@ -90,21 +90,14 @@ body {
   color: var(--branco);
   font-size: 2.5rem;
   margin-bottom: 0.5em;
+}s
+
+
+#introdução input::placeholder {
+  color: var(--cinza-claro);
+  opacity: 1;
 }
 
-#introdução p {
-  color: var(--cinza-medio);
-  font-size: 1.2rem;
-  margin-bottom: 1.5em;
-  text-align: center;
-}
-
-#introdução form {
-  display: flex;
-  gap: 12px;
-  width: 100%;
-  justify-content: center;
-}
 
 .bg-video {
   position: fixed;
