@@ -1,0 +1,268 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --fundo-principal: #181c22;
+  --fundo-secundario: #383836;
+  --azul-escuro: #2d415a;
+  --azul-medio: #4f8cc9;
+  --azul-claro: #d3e7fa;
+  --cinza-medio: #bfc9d1;
+  --cinza-claro: #e5e9ef;
+  --cinza: #7f8083;
+  --cinza-card: #232834;
+  --coral: #ff8a65;
+  --branco: #fff;
+  --preto: #181c22;
+  --borda: #dde932;
+  --sombra: 0 4px 24px #0006;
+  --sombra-leve: 0 2px 8px #0003;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+#introdução {
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 48px 32px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  border-radius: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 0 8px 32px #000a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+#introdução h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, #D4AF37 20%, #fff 50%, #D4AF37 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 2px;
+  animation: shine 1s linear infinite;
+}
+
+#introdução p {
+  color: var(--cinza-medio);
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-style: italic;
+}
+#introdução form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+#introdução input {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  background: var(--fundo-secundario);
+  color: var(--branco);
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+#introdução input::placeholder {
+  color: var(--cinza-claro);
+  opacity: 1;
+}
+
+#introdução button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--azul-medio);
+  color: var(--branco);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#introdução button:hover {
+  background: var(--azul-escuro);
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.procura {
+  font-size: 20px;
+  align-items: center;
+  font-family: 'Cinzel', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif;
+}
+
+.procura input {
+  font-size: 25px;
+  color: aliceblue;
+  font-family: 'robot2';
+  margin: 10px;
+  font-family: 'inter', -apple-system, BlinkMacSystemFont, 'segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: border-color 0.25s;
+  outline: none
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+input:hover {
+  border-color: #D4AF37;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url(/src/font/inter/Inter-Italic-VariableFont_opsz\,wght.ttf) format(truetype);
+}
+
+.nomeem {
+  width: 260px
+}
+
+.procura input::placeholder {
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+}
+
+.abc {
+  width: 50px;
+}
+
+.resultado {
+  background-color: black;
+}
+
+
+/*resultados */
+
+.resultados {
+  width: 100%;
+  max-width: 350px;
+  margin: 32px auto 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+
+.resultado-item {
+  background: var(--fundo-secundario);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--branco);
+  color: var(--branco);
+  font-size: 1rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+
+.resultado-item h3 {
+  color: var(--branco);
+  margin-bottom: 8px;
+}
+.sem-resultados {
+  color: var(--cinza);
+  text-align: center;
+  margin-top: 20px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  #introdução {
+    max-width: 95vw;
+    min-width: unset;
+    padding: 24px 8px;
+    border-radius: 24px;
+  }
+  .resultados {
+    max-width: 95vw;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
