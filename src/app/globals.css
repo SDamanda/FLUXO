@@ -209,26 +209,30 @@ input:hover {
 
 .resultados {
   width: 100%;
-  max-width: 400px;
-  margin: 40px auto 0 auto;
+  max-width: 350px;
+  margin: 32px auto 0 auto;
   list-style: none;
   padding: 0;
 }
 
+
 .resultado-item {
   background: var(--fundo-secundario);
-  padding: 16px;
-  margin-bottom: 12px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid var(--branco);
-
+  color: var(--branco);
+  font-size: 1rem;
+  text-align: left;
+  word-break: break-word;
 }
+
 
 .resultado-item h3 {
   color: var(--branco);
   margin-bottom: 8px;
 }
-
 .sem-resultados {
   color: var(--cinza);
   text-align: center;
@@ -238,4 +242,16 @@ input:hover {
 button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  #introdução {
+    max-width: 95vw;
+    min-width: unset;
+    padding: 24px 8px;
+    border-radius: 24px;
+  }
+  .resultados {
+    max-width: 95vw;
+  }
 }
